@@ -1,0 +1,259 @@
+
+
+<!DOCTYPE HTML>
+<html lang="es">
+<head><script type="text/javascript">var NREUMQ=NREUMQ||[];NREUMQ.push(["mark","firstbyte",new Date().getTime()]);</script>
+    <meta charset="UTF-8">
+    <title>Págalo - Confirmación de pago</title>
+    <meta name="description" content="" />
+    <meta name="google-site-verification" content="" />
+    <meta name="msvalidate.01" content="" />
+    <meta name="author" title="@RichPeniche" href="http://richpeniche.mx" />
+
+    <!-- stylesheet_link_tag "pagalo/reset.css", "pagalo/style.css" -->
+
+    <link href="/stylesheets/pagalo/reset.css" media="screen,print" rel="stylesheet" type="text/css" />
+<link href="https://s3.amazonaws.com/conekta/stylesheets/oxxo.css" media="screen,print" rel="stylesheet" type="text/css" />
+
+    <link href="./media/icons/favicon.ico" type="image/x-icon" rel="icon" />
+    <link href="./media/icons/favicon.ico" type="image/x-icon" rel="shortcut icon" />
+    <link href="./media/icons/apple-touch-icon.png" type="image/x-icon" rel="apple-touch-icon" />
+
+    <!-- javaScript default include blocks-->
+    <!--[if lt IE 9]>
+    <script src="https://ie7-js.googlecode.com/svn/version/2.1(beta4)/IE9.js"></script>
+    <script src="https://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <!-- "jquery-1.7.1.min.js", "jquery-ui-1.8.17.custom.min.js",  -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+    <!-- //javaScripts -->
+    <style>
+      @media print
+      {
+        body * { visibility: hidden; }
+        #flow-wrapper * { visibility: visible; }
+        #flow-wrapper { position: absolute; top: 40px; left: 30px; }
+        div, span, td, h1, h2, h3{color:#000000;}
+      }
+    </style>
+</head>
+<body>
+
+  <!-- Header -->
+    <div class="header" id="header">
+        <div id="header-bar">
+            <div class="color" id="header-bar-wrapper">
+                <div class="right header-link"><div id="login-header"></div></div>
+                <div class="right header-link"><div id="register"></div></div>
+        <!-- jQuery - Shows "register-modal" -->
+                <div class="clear"></div>
+                <div id="pagalo-symbol" style="top:13px;">
+                    <div></div>
+                    <div></div>
+                </div>
+            </div>
+        </div>
+        <div id="user-bar-wrapper">
+          <div id="user-bar">
+              <div class="enhance" title="Este eres tú"></div>
+          </div>
+        </div>
+    </div>
+    <!-- // Header -->
+    <!-- Invite bar -->
+    <div class="confirmation-msg" ><p>    
+
+
+</p></div>
+    <style type="text/css">
+      .confirmation-msg { width:980px; height:50px; margin:0 auto; position:relative; top:-30px; text-align:center; background:white; border-radius:10px; }
+      .confirmation-msg p { line-height:50px; font-size:18px; color:#155A82; font-weight:400; }
+    </style>
+
+    <!-- Leo: Stop adding here -->
+    <div class="pagalo" id="invite-to-register" style="display:none;"> <!-- Leo: Add the style="display:none;" -->
+      <span class="left enhance">Si realizas compras frecuentes con Págalo, te invitiamos a registrarte para ahorrar tiempo en cada compra que realices.</span>
+      <span class="right buttons">REGÍSTRATE</span>
+      <div class="clear"></div>
+    </div>
+    <!-- // Invite bar -->
+    <!-- Payment flow -->
+    <div id="flow">
+        <!-- Top login bar -->
+        <div class="left pagalo login-bar" id="login-bar-top">
+            <form action="" class="login-bar-wrapper">
+                <input type="text" class="left" placeholder="CORREO ELECTRÓNICO"/>
+                <input type="password" class="left" placeholder="CONTRASEÑA"/>
+                <span class="left buttons r-button login b-fix" id="login-top">INICIAR SESIÓN</span>
+                <span class="left close-login" id="close-login-top" title="Cancelar"></span>
+                <div class="clear"></div>
+            </form>
+        </div>
+        <!-- jQuery - Hides "login-bar-top" -->
+        <script type="text/javascript">
+			$(function(){
+				$('#close-login-top').click(function(){
+					$('#login-bar-top').slideUp(500);
+				});
+			});
+		</script>
+        <div class="clear"></div>
+        <!-- // Top login bar -->
+        <div id="flow-wrapper">
+            <!-- Full resume & seller info modules -->
+            <div class="left steps-content">
+                <div class="left module-headers si-headers">
+                    <span> RESUMEN</span>
+                </div>
+                <div class="left module-headers si-headers">
+                    <span> SOBRE EL PROVEEDOR </span>
+                </div>
+                <!-- Full resume module -->
+                <div class="left module-wrapper" id="final-review">
+                    <div class="module-container" id="confirmation">
+                      <p class="enhance fr-titles" style="margin-top:32px !important">HAS   COMPRADO </p>
+                        <!-- In-cart -->
+                        <table id="final-in-cart">
+                              <tr>
+                                <td class="f-qty"><span class="enhance">1</span></td>
+                                <td class="f-item"><span>camisero</span>
+                                </td>
+
+                                <td class="f-ammount"><span>$ 4.00</span></td>
+                            </tr>
+			    
+                        </table>
+                        <!-- Resume -->
+                        <div id="final-resume">
+                            <span class="left">SUBTOTAL</span>
+                            <span class="right">$ 4.00</span>
+                            <span class="left"> ENVÍO</span>
+                            <span class="right">$ 87.13</span>
+                            <span class="left"> IVA </span>
+                            <span class="right">$ 14.58</span>
+                            <span class="left">TOTAL</span>
+                            <span class="right">$ 105.71</span>
+                            <div class="clear"></div>
+
+                        </div>
+                          <div id="payment_method">
+Lo pagaste con
+
+
+ <span>depósito referenciado</span>
+
+</div>
+                        <div class="clear"></div>
+                        <!-- Payment -->
+                        <!-- Shipment -->
+                        <div id="address-wrapper">
+                            <p class="enhance fr-titles"> 
+
+SE ENVIARÁ A
+</p>
+                            <p class="address-info">
+                              <span class="highlight">Conekta Prueba </span>
+                                <span class="address">
+
+amsterdam, <br />Col. Hipódromo <br />Cuauhtémoc, Distrito Federal, 06100 <br />
+
+6042219198</span>
+                                <span class="enhance left">Mensaje Personal:</span><span></span>
+                                <span class="enhance left">Mensaje Personal 2:</span><span></span>
+                              <span class="enhance" style="margin-top:15px;margin-bottom:4px !important">Estafeta: Terrestre</span>
+                            </p>
+                        </div>
+                        <!-- Invoicing -->
+                    </div>
+                </div>
+                <!-- Provider info module -->
+                <div class="left module-wrapper" id="payment-method">
+                    <div class="module-container">
+                        <p>
+En caso de que desees contactar directamente al proveedor, te facilitamos su información de contacto:
+</p>
+                    </div>
+                    <div class="module-container" id="seller-info">
+                      <span class="enhance title">test</span>
+                          <span class="info">Ámsterdam 77  <br/> Col. Hipódromo Condesa<br/> Cuauhtémoc, SO </span>
+                          <span class="title"> TELÉFONO </span>
+                          <span class="info" id="phone">628 </span>
+                          <span class="title">  CORREO ELECTRÓNICO </span>
+                          <span class="info" id="email">contacto@ </span>
+<!--                        <span class="title">ENCARGADO</span>
+<span class="enhance info" id="agent">Héctor Cárdenas</span>-->
+                    </div>
+                </div>
+                <div class="clear"></div>
+            </div>
+            <!-- // Full resume & seller info modules -->
+            <!-- Purchase info -->
+            <div class="right resume">
+                <div class="module-headers" id="resume-header">
+                    <span class="center" style="color:white;">.</span>
+                </div>
+                <div id="resume-details">
+                    <div class="wrapper">
+                        <p>
+                            <span>  COMPRA </span>
+                            <span class="highlight reference-id">#523201300003928</span>
+                        </p>
+                        <ul id="payment-method-resume">
+                            <li>
+Hemos enviado una copia de esta confirmación a tu correo, pero si deseas imprimirla, haz clic en el siguiente botón
+
+</li>
+                            
+                            <div class="clear"></div>
+                        </ul>
+                        <a class="buttons calculate-resume" id="" style="margin-top:14px" onclick='print()'> IMPRIMIR</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Purchase info -->
+            <div class="clear"></div>
+        </div>
+        <!-- Bottom login bar -->
+        <div class="left pagalo login-bar" id="login-bar-bottom">
+            <form action="" class="login-bar-wrapper">
+                <input type="text" class="left" placeholder="CORREO ELECTRÓNICO"/>
+                <input type="password" class="left" placeholder="CONTRASEÑA"/>
+                <span class="left buttons r-button login b-fix" id="login-bottom">INICIAR SESIÓN</span>
+                <span class="left close-login" id="close-login-bottom" title="Cancelar"></span>
+                <div class="clear"></div>
+            </form>
+        </div>
+        <!-- jQuery - Hides and shows "shipment-header-cover" -->
+        <script type="text/javascript">
+			$(function(){
+				$('#close-login-bottom').click(function(){
+					$('#login-bar-bottom').slideUp(500);
+				});
+			});
+		</script>
+        <div class="clear"></div>        
+        <!-- // Bottom login bar -->
+    </div>
+    <!-- // Payment flow -->
+    <!-- Footer -->
+    <div style="display:none;" id="footer">
+        <ul>
+            <li class="left"><a href="./soporte">SOPORTE</a></li>
+            <li class="left"><a href="./terminos-del-servicio">SERVICIO</a></li>
+            <li class="left"><a href="./politica-de-privacidad">PRIVACIDAD</a></li>
+            <li class="left"><a href="./sobre-nosotros">SOBRE NOSOTROS</a></li>
+            <li class="left"><a href="./contacto">CONTÁCTANOS</a></li>
+            <!--           <li class="right"><a href="" id="verisign" title="Ver certificado de seguridad"></a></li>-->
+            <li class="right">PÁGALO.MX &copy, 2013</a></li>
+        </ul>
+    </div>
+    <!-- // Footer -->
+    <!-- Modals -->
+    <!-- // Modals -->
+
+</body>
+</html>
+
+
+
+
