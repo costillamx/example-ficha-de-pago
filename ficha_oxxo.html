@@ -1,0 +1,123 @@
+
+<!DOCTYPE HTML>
+<html lang="es">
+<head>
+
+    <meta charset="UTF-8">
+    <title>Págalo - Tu ficha de pago</title>
+    <meta name="description" content="" />
+    <meta name="google-site-verification" content="" />
+    <meta name="msvalidate.01" content="" />
+
+    <link rel="stylesheet" href="https://s3.amazonaws.com/conekta/stylesheets/oxxo.css" type="text/css" charset="utf-8"/>
+
+    <!-- javaScript default include blocks-->
+    <!--[if lt IE 9]>
+    <script src="https://ie7-js.googlecode.com/svn/version/2.1(beta4)/IE9.js"></script>
+    <script src="https://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <!-- "jquery-1.7.1.min.js", "jquery-ui-1.8.17.custom.min.js",  -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+    <script src="/javascripts/cart/jquery.easing.compatibility.js"></script>
+    <!-- //javaScripts -->
+    <style>
+      @media print
+      {
+        body * { visibility: hidden; }
+        #po-wrapper * { visibility: visible; }
+        #po-wrapper { position: absolute; top: 40px; left: 30px; }
+        div, span, td, h1, h2, h3{color:#000000;}
+      }
+      #print, #po-footer {
+        text-shadow:none;
+      }
+      #po-body-wrapper tr:nth-child(odd){
+        background:#FFFFFF ! important;
+      }
+      #po-body-wrapper tr:nth-child(even){
+        background: #F7F8F8;
+      }
+      #po-body h2.highlight:first{
+        padding-bottom:11px;
+      }
+      #po-header span{
+        width:250px ! important;
+      }
+    </style>
+</head>
+
+
+
+<body style="background-image: url(https://s3.amazonaws.com/publiy/company_resources/original/6a867e4dbde1893de206af9e3fe286fa.png);background-attachment: fixed;background-size:100%;"> 
+  <style>
+    body{background:url(/images/cart/blue.png) #F6FAFC;}
+  </style>
+
+
+    <div id="print">
+
+          <span class="left enhance" id="status">Hemos enviado una copia de esta ficha de pago a <span class="highlight">_correo_ </span></span><a class="right buttons" onclick="print();">IMPRIMIR FICHA DE PAGO</a>
+
+        <div class="clear"></div>
+      </div>
+    <div id="payment-order">
+        <div id="po-wrapper">
+            <div id="po-header">
+              <span class="left" id="pagalo-co-logo">
+                  <img id="logo" src="https://s3.amazonaws.com/conekta/v5/img/conekta-brand.png" style="max-width:250px;max-height:100px;">
+              </span>
+              <span class="left" id="seller-co-logo"><img src="https://s3.amazonaws.com/pagalo/oxxo_logo.png" style="height:80px;padding-left:20px;"></span>
+              <h1 class="right">FICHA DE PAGO<br />PARA DEPÓSITO O<br />OXXO</h1>
+              <div class="clear"></div>
+            </div>
+            <div id="po-body">
+                <div id="po-body-wrapper" style="padding: 30px 20px">
+                    <div class="left">
+                        <h2 class="highlight">INFORMACIÓN DE PAGO</h2>
+                        <table>
+                            <tr style="height:80px;">
+                                <td>CÓDIGO DE BARRAS</td>
+                                <td class="highlight"><img style="margin-right:-10px;" src="https://www2.oxxo.com:8443/HTP/barcode/genbc?data=38100000000061795121213005000060&amp;height=50&amp;width=2&amp;type=Code128"/><div name="test">38100000000061795121213005000060</div></td>
+                            </tr>
+                            <tr>
+                                <td>IMPORTE</td>
+                                <td class="highlight">$ 
+
+500.00
+
+</td>
+                            </tr>
+                            <tr>
+                                <td>COMPAÑÍA</td>
+                                <td class="highlight">_Empresa_</td>
+                            </tr>
+                            <tr>
+                                <td>REFERENCÍA</td>
+                                <td class="highlight">_REFERENCIA_ </td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="right">
+                        <div class="wrapper">
+                            <h3 class="highlight">SIGUIENTE PASO</h3>
+                            <p class="enhance">Tu pago será procesado hasta las 10 AM del siguiente día hábil en que realizaste el pago. En ese momento, recibirás un correo electrónico confirmando tu pago.</span></p>
+                        </div>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+            </div>
+            <div id="po-footnote">
+              <p>Esta ficha de pago no tiene ningún valor comercial, fiscal o monetario. Es una referencia que contiene los datos necesarios para que quien haya realizado una compra en un sitio <span class="enhance"> _Empresa_ </span>  y pueda realizar el pago o transferencia bancaria.</p>
+            </div>
+        </div>
+    </div>
+    <div class="enhance" id="po-footer">
+        <span class="left"><span class="highlight">Powered</span> by _Empresa_</span><span class="right">&copy 2013.</span>
+        <div class="clear"></div>
+    </div>
+</body>
+</html>
+
+
+
+
