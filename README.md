@@ -1,4 +1,4 @@
-ejemplos_de_fichas
+Example Ficha de Pago
 ==================
 
-ejemplos de fichas - oxxo, transferencia y tarjeta credito
+Ejemplos de fichas - oxxo, transferencia y tarjeta credito
